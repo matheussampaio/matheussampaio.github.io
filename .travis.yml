@@ -6,7 +6,7 @@ rvm:
 install:
   - bundle install
 
-script: jekyll build && htmlproof ./_site
+script: bundle exec jekyll build
 
 env:
   global:
