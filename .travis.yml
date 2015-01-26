@@ -1,6 +1,11 @@
 language: ruby
+
 install:
   - bundle install
+
+before_script:
+  - travis_retry gem install htmlproof
+  
 script: jekyll build && htmlproof ./_site
 
 env:
