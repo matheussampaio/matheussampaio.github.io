@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-01-26 14:22:27
 categories: jekyll update
+author: Matheus Sampaio
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -10,15 +11,21 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
+## What will code look like?
+
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
+require 'adapter/memory'
+require 'toystore'
+
+class User
+  include Toy::Store
+  adapter :memory, {}
+
+  attribute :name, String
 end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-{% highlight css %}
+{% highlight css linenos %}
 body {
   font:14px/22px 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#666;
@@ -37,7 +44,6 @@ p, ul, ol, table, pre, dl {
   margin:0 0 20px;
 }
 {% endhighlight %}
-
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 
