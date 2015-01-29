@@ -98,11 +98,11 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $brand-color-visited;
     }
 
     &:hover {
-        color: lighten($brand-color, 30%);
+        color: $brand-color-hover;
     }
 }
 
@@ -210,3 +210,7 @@ pre {
         }
     }
 }
+
+/**
+ * Others
+ */

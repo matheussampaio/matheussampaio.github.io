@@ -3,21 +3,36 @@ layout: default
 ---
 
 <div class="home">
+  <article class="entry">
+    <div class="entry-wrapper">
 
-  <h1 class="page-heading">Posts</h1>
+      <header class="entry-header">
+        <h1 class="entry-title">Latest Thoughts</h1>
+      </header>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="entry-content">
+        <p>My life as a geeky parent of two rambunctious girls is wonderfully crazy. Combined with my passions for design, mobile, and photography, it gets more interesting.</p>
+        <p>I hope you enjoy this compendium of thoughts, stories, experiments and banter regarding making my life work better.</p>
+        <p>– Jeffrey</p>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <ul class="post-list">
+          {% for post in site.posts limit:10 %}
+            <li>
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                <i class="fa fa-angle-right" style="margin-right: 4px;"></i> {{ post.title }} <span class="entry-date"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' | upcase }}</time></span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <nav class="pagination" role="navigation">
+          <a href="{{ site.url | prepend: site.baseurl }}/archive/" class="btn" title="Arquivos">Arquivos</a>
+        </nav>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
 </div>
