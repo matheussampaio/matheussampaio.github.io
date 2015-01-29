@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $brand-color-visited;
     min-height: 56px;
     text-align: center;
 
@@ -56,6 +55,51 @@
     }
 }
 
+/**
+ * Navigation
+ */
+.navigation-wrapper {
+    border-top: 5px solid $brand-color-visited;
+    text-align:center;
+    *zoom:1;
+}
+
+.navigation-wrapper ul {
+    display:inline-block;
+    padding:4px 20px;
+    margin:0 0 50px;
+    vertical-align:top;
+    background-color: $brand-color-visited;
+    -webkit-border-radius:0 0 10px 10px;
+    -moz-border-radius:0 0 10px 10px;
+    border-radius:0 0 10px 10px;
+    *zoom:1;
+}
+
+.navigation-wrapper li {
+    display:block;
+    float:left;
+    font-size:14px;
+    font-size:.875rem;
+    color:#000;
+    text-align:center;
+    text-transform:uppercase;
+    list-style:none;
+}
+
+// .navigation-wrapper li a:hover {
+//     font-weight: bold;
+// }
+
+.navigation-wrapper a {
+    display:block;
+    padding:6px 10px;
+    color:#000;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    font-weight: bold;
+}
 
 
 /**
