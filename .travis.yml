@@ -6,4 +6,8 @@ rvm:
 install:
   - bundle install
 
-script: bundle exec jekyll build
+before_script:
+  - bundle exec jekyll build
+
+script:
+  - htmlproof _site
