@@ -1,5 +1,10 @@
 language: ruby
 
+notifications:
+  email:
+    on_success: change # default: always
+    on_failure: change # default: always
+    
 rvm:
   - 2.2
 
