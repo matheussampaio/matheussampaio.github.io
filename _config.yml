@@ -15,3 +15,6 @@ exclude: [vendor]
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jemoji
