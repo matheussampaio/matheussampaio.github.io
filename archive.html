@@ -1,34 +1,27 @@
 ---
-layout: default
+layout: page
 title: Arquivos
 permalink: /archive/
 ---
 
-<div class="archive">
-  <article class="entry">
-    <div class="entry-wrapper">
+<article class="entry">
+  <div class="entry-wrapper">
 
-      <header class="entry-header">
-        <h1 class="entry-title">{{ page.title }}</h1>
-      </header>
+    <div class="entry-content">
 
-      <div class="entry-content">
+      <ul class="post-list">
+        {% for post in site.posts%}
+          <li>
+            <article>
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                <i class="fa fa-angle-right" style="margin-right: 4px;"></i> {{ post.title }} <span class="entry-date"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' | upcase }}</time></span>
+              </a>
+            </article>
+          </li>
+        {% endfor %}
+      </ul>
 
-        <ul class="post-list">
-          {% for post in site.posts%}
-            <li>
-              <article>
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                  <i class="fa fa-angle-right" style="margin-right: 4px;"></i> {{ post.title }} <span class="entry-date"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' | upcase }}</time></span>
-                </a>
-              </article>
-            </li>
-          {% endfor %}
-        </ul>
-
-      </div>
     </div>
+  </div>
+</article>
 
-  </article>
-
-</div>

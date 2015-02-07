@@ -1,46 +1,31 @@
 ---
-layout: default
-title: Tags
+layout: page
+title: Tag Index
 permalink: /tags/
 ---
-<div class="home">
-    <article class="entry">
-        <div class="entry-wrapper">
 
-            <header class="entry-header">
-              <h1 class="entry-title">Tag Index</h1>
-            </header>
+<article class="entry">
+    <div class="entry-wrapper">
 
-            {% for tag in site.tags %}
-                {% assign t = tag | first %}
-                {% assign posts = tag | last %}
+        {% for tag in site.tags %}
+            {% assign t = tag | first %}
+            {% assign posts = tag | last %}
 
-                <div id="{{ t }}" class="post-tag">{{ t | upcase }}</div>
+            <h4 id="{{ t }}" class="post-tag">{{ t | upcase }}</h4>
 
-                <ul class="post-list">
-                    {% for post in posts %}
-                        {% if post.tags contains t %}
-                            <li>
-                                <!-- <a href="{{ post.url }}">{{ post.title }}</a>
-                                <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span> -->
-                                <a href="{{ post.url | prepend: site.baseurl }}">
-                                    <i class="fa fa-angle-right" style="margin-right: 4px;"></i> {{ post.title }} <span class="entry-date to-right"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' | upcase }}</time></span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            {% endfor %}
-        </div>
-    </article>
-</div>
+            <ul class="post-list">
+                {% for post in posts %}
+                    {% if post.tags contains t %}
+                        <li>
+                            
+                            <a href="{{ post.url | prepend: site.baseurl }}">
+                                <i class="fa fa-angle-right" style="margin-right: 4px;"></i> {{ post.title }} <span class="entry-date to-right"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' | upcase }}</time></span>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endfor %}
 
-<!-- <ul class="post-list">
-    {% for post in site.posts limit:10 %}
-        <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">
-                <i class="fa fa-angle-right" style="margin-right: 4px;"></i> {{ post.title }} <span class="entry-date"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' | upcase }}</time></span>
-            </a>
-        </li>
-    {% endfor %}
-</ul> -->
+    </div>
+</article>

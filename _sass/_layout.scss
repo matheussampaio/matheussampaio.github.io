@@ -4,6 +4,7 @@
 .site-header {
     min-height: 56px;
     text-align: center;
+    margin-bottom: $spacing-unit;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -125,16 +126,85 @@
 /**
  * Page content
  */
-.page-content {
-    padding: $spacing-unit 0;
-}
+// .page-content {
+//     padding: $spacing-unit 0;
+// }
 
 .page-heading {
     font-size: 20px;
 }
 
+.page-header {
+    margin-bottom: $spacing-unit;
+}
+
+.page-title {
+    font-family: 'Volkhov', sans-serif;
+    font-size: $base-font-size * 3;
+    font-style: italic;
+    letter-spacing: -3px;
+    line-height: 1;
+    text-align: center;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+// .page-header {
+//     margin-bottom: $spacing-unit / 20;
+// }
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-family: 'Volkhov', sans-serif;
+    font-size: $base-font-size * 3;
+    font-style: italic;
+    letter-spacing: -3px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content, .page-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
 .post-list {
-    margin-top: $spacing-unit / 2;
+    margin-top: $spacing-unit;
     margin-bottom: $spacing-unit;
     margin-left: 0;
     list-style: none;
@@ -163,8 +233,11 @@
     font-weight: bold;
 }
 
+
+/**
+ * Tag
+ */
 .tag-link {
-    color: $text-color !important;
     font-weight: bold;
 
     &:hover {
@@ -172,54 +245,6 @@
     }
 }
 
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-
-.post-title {
-    font-family: 'Volkhov', sans-serif;
-    font-size: $base-font-size * 3;
-    font-style: italic;
-    letter-spacing: -3px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
 
 /**
  * Entry
