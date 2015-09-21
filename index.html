@@ -1,15 +1,12 @@
 ---
 layout: page
-title: Últimos Posts
+title: Last Posts
 ---
 
 <article class="entry">
   <div class="entry-wrapper">
 
     <div class="entry-content">
-      <p>Lorem ipsum Cillum quis pariatur nisi commodo cillum reprehenderit sit dolor esse non aliquip.</p>
-      <p>Lorem ipsum Cillum quis irure deserunt eu do magna nisi anim Duis nulla dolore esse eiusmod elit sint cillum quis in in Excepteur ut veniam deserunt..</p>
-      <p>– Matheus</p>
 
       <ul class="post-list">
         {% for post in site.posts limit:10 %}
@@ -22,7 +19,7 @@ title: Últimos Posts
       </ul>
 
       <nav class="pagination" role="navigation">
-        <a href="{{ site.url | prepend: site.baseurl }}/archive/" class="btn" title="Arquivos">Arquivos</a>
+        <a href="{{ site.url | prepend: site.baseurl }}/archives/" class="btn" title="Arquives">Arquives</a>
       </nav>
     </div>
   </div>
