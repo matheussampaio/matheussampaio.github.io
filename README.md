@@ -2,6 +2,20 @@
 
 # Matheus Sampaios's Blog
 
+# Install & Run
+
+With vagrant:
+```
+$ vagrant up
+$ vagrant ssh
+$ blog
+```
+
+Without vagrant (ruby required):
+```
+$ gem install bundler
+$ bundle exec jekyll serve -D
+```
 
 # License
 MIT
