@@ -6,6 +6,7 @@ apt-get update
 apt-get install -y make build-essential nodejs ruby1.9.3 vim
 
 gem install bundler
+bundle install
 
 echo "alias blog='cd /vagrant; bundle exec jekyll serve -D --force_polling'" >> ~/.bash_aliases
-source "~/.bashrc"
+# source "~/.bashrc"
