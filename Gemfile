@@ -1,5 +1,9 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'github-pages'
-gem 'jekyll-gist'
-gem 'jemoji'
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-gist"
+gem "jemoji"

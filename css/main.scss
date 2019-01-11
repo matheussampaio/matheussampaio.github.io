@@ -1,6 +1,7 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
 // Our variables
@@ -11,11 +12,14 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
+$primary-color: #ffaa00;
+$secondary-color: #009ff6;
+
 $text-color:       #f0e7d5;
 $background-color: #252525;
 $brand-color:      #ffaa00;
-$brand-color-hover: #ffdd00;
-$brand-color-visited: #ffbb22;
+$brand-color-hover: $secondary-color;
+$brand-color-visited: #ffdd00;
 
 $grey-color:       #CCC;
 $grey-color-light: light($grey-color, 0%);
@@ -24,26 +28,13 @@ $grey-color-dark:  darken($grey-color, 50%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+@import "base";
+@import "layout";
+@import "syntax-highlighting";
