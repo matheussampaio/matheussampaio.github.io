@@ -1,21 +1,12 @@
 [![Build Status](https://travis-ci.org/matheussampaio/matheussampaio.github.io.svg?branch=master)](https://travis-ci.org/matheussampaio/matheussampaio.github.io)
 
-# Matheus Sampaios's Blog
+# Matheus Sampaio's Blog
 
-# Install & Run
+## Requirements
+- Docker
 
-With vagrant:
-```
-$ vagrant up
-$ vagrant ssh
-$ blog
-```
+## Install & Run
 
-Without vagrant (ruby required):
+```bash
+$ docker-compose up
 ```
-$ gem install bundler
-$ bundle exec jekyll serve -D
-```
-
-# License
-MIT
