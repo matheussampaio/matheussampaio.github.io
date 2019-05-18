@@ -1,29 +1,25 @@
 ---
-layout: page
-title: Last Posts
+layout: default
+title: Home
 ---
 
-<article class="entry">
-  <div class="entry-wrapper">
-
-    <div class="entry-content">
-
-      <ul class="post-list">
-        {% for post in site.posts limit:10 %}
-          <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              <i class="fa fa-angle-right" style="margin-right: 4px;"></i> {{ post.title }} <span class="entry-date"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' | upcase }}</time></span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-
-      <nav class="pagination" role="navigation">
-        <a href="{{ site.url | prepend: site.baseurl }}/archives/" class="btn" title="Arquives">Arquives</a>
-      </nav>
-    </div>
+<section class="post-list">
+  <div class="container">
+    {% for post in site.posts %}
+      {% unless post.next %}
+        <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
+      {% else %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nyear %}
+          <h2 class="category-title">{{ post.date | date: '%Y' }}</h2>
+        {% endif %}
+      {% endunless %}
+      <article class="post-item">
+        <span class="post-meta date-label">{{ post.date | date: "%b %d" }}</span>
+        <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></div>
+      </article>
+    {% endfor %}
   </div>
 
-</article>
-
-<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+</section>

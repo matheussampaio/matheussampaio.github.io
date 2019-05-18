@@ -1,29 +1,46 @@
 # Site settings
-title: Matheus Sampaio's Blog
-author: Matheus Sampaio
-email: matheus@sampaio.us
-description: > # this means to ignore newlines until "baseurl:"
-  About everything.
-footer_description: > # this means to ignore newlines until "baseurl:"
-  @ 2015-2019 Matheus Sampaio
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://matheus.sampaio.us" # the base hostname & protocol for your site
+title_left    : ""
+title_right   : "Matheus Sampaio"
+description   : "Blog"
+keywords      : "node, git, react, vim, zsh"
+url           : http://matheus.sampaio.us
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "" # image uri like logo/cover image for site seo
 
-twitter_username: matheussampaio
-github_username:  matheussampaio
-linkedin_username: matheussampaio
-
-timezone: America/Recife
-
-encoding: "utf-8"
-
-exclude: [vendor]
+google_analytics  : UA-11435494-5
+twitter_username  : "matheussampaio"
+comments_enabled  : false # if enabled (set to true), please provide your disqus_username
+disqus_shortname  : ""
+postshare_enabled : false
 
 # Build settings
-markdown: kramdown
+permalink   : /:year/:month/:day/:title
+markdown    : kramdown
+highlighter : rouge
 
+source      : ./
+destination : ./_site
+
+# Sass configuration
 sass:
-  style: compact
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+# Author settings
+author:
+  name     : "Matheus Sampaio"
 
 plugins:
+  - jekyll-sitemap
+  - bourbon
+  - jekyll-paginate
   - jemoji
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md", "script", "Dockerfile", "docker-compose.yml", ".env"]

@@ -1,12 +1,13 @@
-[![Build Status](https://travis-ci.org/matheussampaio/matheussampaio.github.io.svg?branch=master)](https://travis-ci.org/matheussampaio/matheussampaio.github.io)
+# Thinkspace
 
-# Matheus Sampaio's Blog
+> Thinkspace is just another minimalist Jekyll theme which designed for technical writing blog.
 
-## Requirements
-- Docker
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GENERATOR](https://img.shields.io/badge/made_with-jekyll-blue.svg) ![VERSION](https://img.shields.io/badge/current_version-2.5-green.svg) ![TRAVIS-CI](https://travis-ci.org/heiswayi/thinkspace.svg?branch=master)
 
-## Install & Run
+- **Demo:** https://heiswayi.github.io/thinkspace/
 
-```bash
-$ docker-compose up
-```
+![SCREENSHOT](https://i.imgur.com/1YS078k.png)
+
+## License
+
+[MIT](LICENSE.md)
