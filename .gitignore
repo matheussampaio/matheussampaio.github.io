@@ -1,6 +1,5 @@
 _site/
-.sass-cache/
-.vagrant/
 
+.DS_Store
 .jekyll-metadata
 *.swp

@@ -12,6 +12,8 @@ twitter_username  : "matheussampaio"
 comments_enabled  : false # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
 postshare_enabled : false
+future            : false
+show_drafts       : false
 
 # Build settings
 permalink   : /:year/:month/:day/:title
