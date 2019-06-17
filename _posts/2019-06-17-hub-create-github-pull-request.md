@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create GitHub's PRs from you CLI"
+title: "Create GitHub's PRs from your CLI"
 date: "2019-06-17 15:35:36 -0500"
 tags: "cli hub git github"
 published: true
