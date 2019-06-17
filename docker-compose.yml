@@ -4,7 +4,7 @@ services:
   blog:
     build:
       context: .
-    command: bundle exec jekyll serve --host 0.0.0.0 --drafts --livereload
+    command: bundle exec jekyll serve --host 0.0.0.0 --drafts --livereload --incremental --unpublished --future
     tty: true
     ports:
       - "4000:4000"
