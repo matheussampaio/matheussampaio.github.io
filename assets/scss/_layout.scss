@@ -140,14 +140,12 @@ hr {
 
 .post-item {
   margin-bottom: 0.2em;
-  display: block;
 
   a {
     color: $action-color;
   }
 
   .article-title {
-    display: inline-block;
     width: 85%;
     //border-bottom: 1px dashed lighten($light-gray-color, 10%);
   }
