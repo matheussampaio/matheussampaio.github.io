@@ -161,7 +161,7 @@ hr {
 }
 
 .post-meta {
-  color: #757575;
+  color: #656565;
   text-transform: uppercase;
   display: inline-block;
   letter-spacing: 1px;
@@ -233,7 +233,7 @@ hr {
   small {
     display: block;
     font-size: rem(12);
-    color: darken($medium-gray-color, 10%);
+    color: darken($medium-gray-color, 20%);
   }
 
   .block {
