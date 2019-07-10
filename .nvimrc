@@ -10,7 +10,7 @@ let g:jekyll_post_template =  [
     \ 'title: "JEKYLL_TITLE"',
     \ 'date: "JEKYLL_DATE"',
     \ 'tags: ""',
-    \ 'published: false',
+    \ 'published: true',
     \ '---',
     \ '']
 " Directory to place generated files in when running :Jbuild command.
